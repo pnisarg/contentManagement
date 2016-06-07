@@ -1,0 +1,18 @@
+<h1>Demo#index</h1>
+<p>Hello from index!</p>
+
+
+
+<% target = "world" %>
+
+<%= "Hello #{target}" %>
+
+<% @array.each do |n| %>
+	<%= n %>
+<% end %>
+
+<a href="/demo/hello">Hello page 1</a>
+<br>
+<%= link_to('Hello page 2', {:action => 'hello'}) %><br>
+<%= link_to('Hello with parameters', 
+{:id => 20, :fname => 'Nisarg', :lname => 'Patel',   :action => 'hello_method'}) %><br>
