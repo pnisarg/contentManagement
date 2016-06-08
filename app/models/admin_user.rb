@@ -30,4 +30,10 @@ class AdminUser < ActiveRecord::Base
 	:format => EMAIL_REGEX,
 	:confirmation => true
 
+	scope :sorted, lambda{ order("admin_users.last_name ASC", "admin_users.first_name ASC")}
+
+	def name
+		"#{first_name} #{last_name}" 
+	end
+
 end
