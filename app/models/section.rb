@@ -3,7 +3,8 @@ class Section < ActiveRecord::Base
 	has_many :section_edits
 	has_many :editors, :through => :section_edits, :class_name => "AdminUser"
 	belongs_to :page
-
+	acts_as_list :scope => :page
+	 
 	CONTENT_TYPE = ['text', 'HTML']
 	#validation rules
 	validates_presence_of :name

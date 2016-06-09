@@ -1,5 +1,6 @@
 class Page < ActiveRecord::Base
 	belongs_to :subject
+	acts_as_list :scope => :subject
 	has_and_belongs_to_many :editors, :class_name => "AdminUser"
 	has_many :sections
 

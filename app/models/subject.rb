@@ -1,6 +1,7 @@
 class Subject < ActiveRecord::Base
 	#Relationship
 	has_many :pages
+	acts_as_list
 	
 	#validation rules
 	validates_presence_of :name
